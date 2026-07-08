@@ -165,7 +165,7 @@
                     <div class="swiper-wrapper">
                         {% for i in gallery_range %}
                         <div class="swiper-slide">
-                            <img src="{{ url_for('static', filename='img/portfolio1.jpg') }}" alt="Portfolio 1">
+                            <img src="{{ url_for('static', filename='img/portfolio' ~ i ~ '.jpeg') }}" alt="Portfolio {{ i }}">
                         </div>
                         {% endfor %}
                     </div>
