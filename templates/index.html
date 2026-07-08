@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iky Barbershop | Rifky Barber Sukoharjo</title>
+    <meta name="description" content="Iky Barbershop by Rifky di Grogol, Sukoharjo. Layanan potong rambut premium pria setiap hari 10.00 - 21.00.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="site-header reveal-header">
+        <a href="#home" class="brand">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Iky Logo">
+            <span>Iky Barbershop</span>
+        </a>
+        
+        <button class="menu-toggle" type="button" aria-label="Buka menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
+            <a href="#home">Home</a>
+            <a href="#about-owner">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="reveal delay-100">Gaya Rambut Berkarakter.<br>Untuk Jiwa yang Kalcer.</h1>
+                <p class="hero-copy reveal delay-200">Potongan rapi, detail bersih, dan gaya yang siap dipakai setiap hari. Pengalaman grooming terbaik bersama kami.</p>
+                <div class="hero-actions reveal delay-300">
+                    <a class="btn btn-primary" href="https://wa.me/6281249422367?text=Halo%20Iky%20Barbershop%2C%20saya%20ingin%20booking%20potong%20rambut." target="_blank">Booking WhatsApp</a>
+                    <a class="btn btn-outline" href="#gallery">Lihat Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about-owner">
+            <div class="container intro-grid">
+                <div class="intro-text reveal">
+                    <span class="eyebrow">Barbershop Experience</span>
+                    <h2>"Tempatnya Grooming Pria Kalcer"</h2>
+                    
+                    <p class="text-muted about-desc">Master Barber berpengalaman 3+ tahun dan Founder dari Iky Barbershop (Est 2026) dengan visi kuat terhadap evolusi tren grooming pria. Pada usia 21 tahun, telah berhasil membangun fondasi bisnis yang solid melalui kombinasi teknik tata rambut yang tajam, pelayanan yang sangat bersahabat, dan representasi visual (personal branding) yang kuat. Memiliki kemampuan komunikasi yang luar biasa untuk memahami visi setiap klien dan mengubahnya menjadi gaya rambut yang meningkatkan kepercayaan diri mereka. Berkomitmen penuh pada keunggulan layanan, kebersihan, dan menciptakan lingkungan pangkas rambut yang modern, inklusif, dan profesional.</p>
+                </div>
+                
+                <div class="owner-profile reveal delay-300">
+                    <img src="{{ url_for('static', filename='images/owner.jpeg') }}" alt="Rifky - Owner Iky Barbershop">
+                    <div class="owner-badge float-anim">
+                        <span>Founder & Master Barber</span>
+                        <strong>Moh Rifki Ferdiansah</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="eyebrow">Price List</span>
+                    <h2>Layanan Kami</h2>
+                    <p class="text-muted max-w-600 mx-auto">Kami menawarkan berbagai layanan potongan rambut dan pewarnaan dengan standar profesional.</p>
+                </div>
+
+                <h3 class="category-title reveal delay-100">HAIRCUT</h3>
+                <div class="services-grid mb-2">
+                    <div class="service-card reveal delay-100">
+                        <div class="service-icon"><i class="fas fa-cut"></i></div>
+                        <div class="service-info">
+                            <h3>REGULAR CUT</h3>
+                            <div class="service-price">15 K</div>
+                            <p class="text-muted">(potong rambut biasa)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-200">
+                        <div class="service-icon"><i class="fas fa-crown"></i></div>
+                        <div class="service-info">
+                            <h3>PREMIUM CUT</h3>
+                            <div class="service-price">20 K</div>
+                            <p class="text-muted">(potong rambut + keramas + pijat + styling)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-300">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <div class="service-info">
+                            <h3>HAIRWASH & MASSAGE</h3>
+                            <div class="service-price">10 K</div>
+                            <p class="text-muted">(keramas + pijat biasa)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-400">
+                        <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+                        <div class="service-info">
+                            <h3>HAIR TATTO</h3>
+                            <div class="service-price">5 K</div>
+                            <p class="text-muted">(skin / gambar rambut)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="category-title mt-2 reveal delay-100">COLOURING</h3>
+                <div class="services-grid">
+                    <div class="service-card reveal delay-100">
+                        <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
+                        <div class="service-info">
+                            <h3>BASIC COLOURING</h3>
+                            <div class="service-price">50 K</div>
+                            <p class="text-muted">(pewarnaan dasar seperti hitam, coklat, blue black)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-200">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="service-info">
+                            <h3>BLEACHING COLOUR</h3>
+                            <div class="service-price">50 K</div>
+                            <p class="text-muted">(pewarnaan dasar bleaching 1x proses)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-300">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        <div class="service-info">
+                            <h3>HAIRLIGHT COLOUR</h3>
+                            <div class="service-price">120 K - 150 K</div>
+                            <p class="text-muted">(pewarnaan sebagian rambut dengan warna abu-abu, biru, dll)</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal delay-400">
+                        <div class="service-icon"><i class="fas fa-palette"></i></div>
+                        <div class="service-info">
+                            <h3>FULLBLOCK COLOUR</h3>
+                            <div class="service-price">150 K - 200 K</div>
+                            <p class="text-muted">(pewarnaan semua bagian rambut dengan warna abu-abu, biru, dll)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-2 reveal delay-500">
+                    <a class="btn btn-outline" href="#contact">Konsultasi</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="eyebrow">Gallery</span>
+                    <h2>Gallery Iky Barbershop</h2>
+                </div>
+                
+                <div class="swiper gallerySwiper reveal delay-200">
+                    <div class="swiper-wrapper">
+                        {% for i in gallery_range %}
+                        <div class="swiper-slide">
+                            <img src="{{ url_for('static', filename='images/portofolio ' ~ i ~ '.jpeg') }}" alt="Portfolio {{ i }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="reviews">
+            <div class="container">
+                <div class="text-center reveal mb-2">
+                    <span class="eyebrow">Reviews Costumer</span>
+                    <h2>Kata Mereka</h2>
+                    <p class="text-muted max-w-600 mx-auto">Ulasan dari pelanggan setia kami. Kepuasan Anda adalah prioritas utama Iky Barbershop.</p>
+                </div>
+                
+                <div class="swiper reviewsSwiper reveal delay-200">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #e74c3c;">A</div>
+                                <div class="reviewer-meta">
+                                    <h4>Ahmad Fauzi</h4>
+                                    <span>Local Guide • 18 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Potongan sangat rapi, Mas Rifky teliti banget. Tempatnya nyaman dan bersih. Bakal jadi langganan setiap bulan!"</p>
+                        </div>
+                        
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #3498db;">E</div>
+                                <div class="reviewer-meta">
+                                    <h4>Eko Prasetyo</h4>
+                                    <span>Pelanggan • 4 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Fade-nya dapet banget, pelayanannya asik diajak ngobrol. Mantap banget buat area Grogol, Sukoharjo!"</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #2ecc71;">A</div>
+                                <div class="reviewer-meta">
+                                    <h4>Aditya Wijaya</h4>
+                                    <span>Local Guide • 32 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Detail presisi dan gak buru-buru. Rekomendasi banget buat mahasiswa atau pekerja yang pengen tampil rapi maksimal."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #f1c40f;">H</div>
+                                <div class="reviewer-meta">
+                                    <h4>Hendra Kurniawan</h4>
+                                    <span>Pelanggan • 9 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Tempat bersih, AC dingin, hasil potongan memuaskan. Harganya juga sangat bersahabat untuk kualitas premium."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #9b59b6;">F</div>
+                                <div class="reviewer-meta">
+                                    <h4>Farhan Ramadhan</h4>
+                                    <span>Local Guide • 14 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Barbershop terbaik di Sukoharjo sejauh ini. Langsung ngerti gaya rambut yang saya mau tanpa harus banyak jelasin."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #1abc9c;">D</div>
+                                <div class="reviewer-meta">
+                                    <h4>Dwi Cahyo</h4>
+                                    <span>Pelanggan • 2 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★<span class="star-muted">★</span></div>
+                            <p class="review-text">"Suka banget sama pelayanan hair wash-nya, pijatannya bikin rileks banget setelah seharian capek kerja."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #e67e22;">A</div>
+                                <div class="reviewer-meta">
+                                    <h4>Agus Setiawan</h4>
+                                    <span>Local Guide • 45 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Gaya rambut selalu pas dengan bentuk wajah. Thanks Iky Barbershop, selalu bisa diandalkan tiap bulan."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #34495e;">W</div>
+                                <div class="reviewer-meta">
+                                    <h4>Wahyu Hidayat</h4>
+                                    <span>Pelanggan • 7 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Langganan sejak awal buka. Kualitas potongannya gak pernah menurun, selalu terjaga dan makin rapi detailnya."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #7f8c8d;">T</div>
+                                <div class="reviewer-meta">
+                                    <h4>Tri Utomo</h4>
+                                    <span>Local Guide • 23 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Potong rambut sekalian trim jenggot, hasilnya rapi parah. Shaving-nya mulus dan bersih banget alatnya steril."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #d35400;">M</div>
+                                <div class="reviewer-meta">
+                                    <h4>Muhammad Rifai</h4>
+                                    <span>Pelanggan • 5 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Minta potongan undercut hasilnya rapi banget gradasinya halus. Ruangan ber-AC jadi nyaman nunggunya."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #2c3e50;">D</div>
+                                <div class="reviewer-meta">
+                                    <h4>Dian Nugroho</h4>
+                                    <span>Local Guide • 11 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Gak pernah kecewa potong disini. Sukses terus Mas Rifky, pertahankan pelayanannya yang mantap!"</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #16a085;">A</div>
+                                <div class="reviewer-meta">
+                                    <h4>Arif Rahman</h4>
+                                    <span>Pelanggan • 3 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Mantap pelayanannya cepat tapi detail banget. Sangat recommended buat yang cari barbershop area Grogol."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #bdc3c7; color: #333;">B</div>
+                                <div class="reviewer-meta">
+                                    <h4>Bagus Saputra</h4>
+                                    <span>Local Guide • 29 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Vibes tempatnya enak, musiknya santai. Mas Rifky asik diajak diskusi soal gaya rambut yang cocok."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #8e44ad;">F</div>
+                                <div class="reviewer-meta">
+                                    <h4>Fajar Shodiq</h4>
+                                    <span>Pelanggan • 6 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Minta potongan klasik pompadour hasilnya simetris dan rapi. Penataan pomadenya juga pas."</p>
+                        </div>
+
+                        <div class="swiper-slide google-review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #27ae60;">G</div>
+                                <div class="reviewer-meta">
+                                    <h4>Guntur Wibowo</h4>
+                                    <span>Local Guide • 15 Ulasan</span>
+                                </div>
+                                <i class="fab fa-google google-g-icon"></i>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Pewarnaannya bagus dan teliti pas basic colouring, rambut gak jadi kasar atau rusak. Top abis lah."</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="eyebrow">Location & Contact</span>
+                    <h2>Kunjungi Iky Barbershop</h2>
+                    <p class="text-muted max-w-600 mx-auto mb-2">Temukan lokasi kami dengan mudah atau hubungi kami lewat media sosial untuk melakukan reservasi.</p>
+                </div>
+
+                <div class="contact-wrapper mt-2">
+                    <div class="map-container reveal delay-100">
+                        <iframe 
+                            src="https://maps.app.goo.gl/PFxYAwNbagS6wEUt8" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="contact-details reveal delay-300">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Alamat Lengkap</h4>
+                                <p>Jl. Flamboyan Raya, Sawah, Sanggrahan, Kec. Grogol, Kab. Sukoharjo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Buka Setiap Hari | 10.00 - 21.00 WIB</p>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-2" style="color: var(--text-main); margin-bottom: 1rem;">Ikuti Kami di Sosial Media</h4>
+                        
+                        <div class="social-pills">
+                            <a href="https://wa.me/6281249422367?text=Halo%20Iky%20Barbershop%2C%20saya%20ingin%20booking%20potong%20rambut." class="social-pill wa" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/iky.barbershop/" class="social-pill ig" target="_blank">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://www.tiktok.com/@ikybarbershop" class="social-pill tt" target="_blank">
+                                <i class="fab fa-tiktok"></i> TikTok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer reveal">
+        <div class="container footer-grid text-center">
+            <a href="#home"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Iky" class="footer-logo pulse-anim"></a>
+            <h3>Iky Barbershop by Moh Rifki Ferdiansah</h3>
+            <p>© 2026 Iky Barbershop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Init Slider Gallery (Horizontal dengan klik panah)
+        var gallerySwiper = new Swiper(".gallerySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        // Init Slider Reviews (Efek Marquee: Otomatis Jalan Tanpa Berhenti)
+        var reviewsSwiper = new Swiper(".reviewsSwiper", {
+            direction: "horizontal",
+            loop: true,
+            speed: 5000, // Kecepatan geser otomatis (semakin besar angkanya, semakin lambat)
+            autoplay: {
+                delay: 0, // Tanpa jeda berhenti sama sekali
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 25 },
+                1024: { slidesPerView: 3, spaceBetween: 30 }
+            }
+        });
+
+        // Hamburger Menu Logic
+        const menuBtn = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.main-nav a');
+
+        menuBtn.addEventListener('click', () => nav.classList.toggle('active'));
+        navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
+
+        // Header Background on Scroll
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
